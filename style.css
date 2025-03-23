@@ -1,0 +1,161 @@
+style.css
+* {
+    margin: 0; 
+    padding: 0;
+} /* 重置所有樣式，因原設定會影響版面 */
+header, section, footer {
+    background-color:white;
+    border: 10px solid black;
+    padding: 30px;
+} /* 將版面分為 header, section, footer 並設定其樣式 */
+header{
+    background-color:rgb(0, 0, 0);
+} /* 設定 header 的背景顏色 */
+header li{
+    display: inline;
+    margin-right: 4vw;
+} /* 設定 header 的 li 在版面的位置 */
+header ul{
+    position:absolute;
+    right:5vw;
+    top:0;
+    line-height:80px;
+} /* 設定 header 的 ul 在版面的位置 */
+h1{
+    position: absolute;
+    left:120px;
+    top:0;
+    line-height:50px;
+} /* 設定 h1 在版面的位置 */
+h1{
+    color:white
+} /* 設定 h1 的字體顏色 */
+h1 a {
+    color:white;
+    text-decoration:none;
+} /* 設定 h1 的 a 的字體顏色 */
+h1 a:hover{
+    text-decoration: underline;
+} /* 設定 h1 的 a 的滑鼠移動時的樣式 */
+ul li a {
+    color:white;
+    text-decoration:none;
+} /* 設定 ul 的 li 的 a 的字體顏色 */
+ul li a:hover{
+    text-decoration: underline;
+} /* 設定 ul 的 li 的 a 的滑鼠移動時的樣式 */
+.news {
+    background-color: #d3d3d3;
+    color: black;
+    height: 100vh;
+    background-image: url("口甲菜狼 店面照.jpg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+} /* 設定 news 的版面樣式，包括位置、顏色、背景圖片及其相關規定 */
+.news {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} /* 設定 news 的版面樣式，包括位置、對齊方式 */
+.news h2{
+    color:white;
+    font-size: 35px;
+} /* 設定 news 的 h2 的字體顏色及大小 */
+.news p{
+    color:white;
+    font-size: 20px;
+    margin: 25px 0;
+} /* 設定 news 的 p 的字體顏色、大小及位置 */
+h3 a {
+    color:white;
+    text-decoration:none;
+} /* 設定 h3 的 a 的字體顏色 */
+h3 a:hover{
+    text-decoration:underline;
+} /* 設定 h3 的 a 的滑鼠移動時的樣式 */
+p,ul{
+    color:black;
+    font-size: 20px;
+    padding: 20px;
+}
+.product{
+    display:flex;
+    background-color: #d3d3d3;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 5%;
+    gap: 20px;
+    text-align: center; 
+} /* 設定 product 的版面樣式，包括位置、對齊方式、背景顏色及其相關規定 */
+.product div{
+    width: 25%;
+    text-align: center;
+    flex-grow:0;
+} /* 設定 product 的 div 的版面樣式，包括寬度、對齊方式 */
+.product img{
+    width: 80%;
+    border-radius: 10px;
+}  /* 設定 product 中照片的版面樣式，包括寬度、圓角 */
+.product h4{
+    font-size: 20px;
+    margin: 35px auto 10px;
+    gap:20px;
+    text-align: center;
+} /* 設定 product 中產品名稱的字體大小、位置及對齊方式 */
+.product p{
+    font-size: 14px;
+    line-height:1.3em;
+    margin: 5px auto;
+    gap:20px;
+    text-align: center;
+}   /* 設定 product 中產品描述的字體大小、位置及對齊方式 */
+footer{
+    background-color:black;
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+    height:6px;
+    line-height:0.5em;
+    padding:5px 0;
+    overflow:hidden;
+    white-space:normal;
+} /* 設定 footer 的版面樣式，包括位置、對齊方式、背景顏色及其相關規定 */
+footer p{
+    display: flex;
+    color:white;
+    font-size: 12px;
+    margin: 3px 0;
+    line-height:1.5em;
+    white-space: normal;
+} /* 設定 footer 的 p 的版面樣式，包括字體顏色、大小、位置配置及對齊方式 */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+} /* 設定 footer-container 的版面樣式，包括位置、對齊方式、寬度及其相關規定 */
+
+/* 響應式設計語法 */
+@media screen and (max-width: 768px){
+    header ul{
+        visibility: hidden;}
+    header h1{
+        left:50%;
+        transform: translateX(-50%);}
+    .news h2{
+        font-size: 35px;}
+    .product{
+        flex-direction: column;
+        padding: 60px 0;}
+    .product div{
+        margin-bottom:30PX;
+    }
+}
+/*設定當螢幕寬度小於768px時的樣式調整*/
